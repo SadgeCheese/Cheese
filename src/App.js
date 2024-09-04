@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Grid from '@mui/material/Grid2';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import * as React from 'react';
+//import Box from '@mui/material/Box';
 
-function App() {
+
+const LoginScreen = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid size={{ xs: 12, md: 5 }}>
+      <TextField id="outlined-basic" label="Email Address" variant="outlined" />
+      <TextField id="outlined-basic" label="Password" variant="outlined" />
+      <Button variant="contained">Login</Button>
+    </Grid>
   );
-}
+};
 
-export default App;
+export default LoginScreen;
